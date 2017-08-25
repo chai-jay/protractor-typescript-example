@@ -1,0 +1,35 @@
+{
+  "name": "protractor-ts-seed",
+  "version": "1.0.0",
+  "description": "Runs Protractor E2E tests from a Typescript setup",
+  "author": {
+    "name": "Jing Chai",
+    "email": "jingweichai@gmail.com"
+  },
+  "license": "MIT",
+  "scripts": {
+    "debug": "node --inspect --debug-brk ./node_modules/.bin/protractor tmp/conf.js",
+    "tsc": "tsc",
+    "pretest": "tsc",
+    "test": "protractor tmp/conf.js",
+    "test-qa": "npm run test",
+    "pretest-prod": "tsc",
+    "test-prod": "protractor tmp/conf.js --params.baseUrl=https://www.google.com",
+    "pretest-qa-cross": "tsc",
+    "test-qa-cross": "protractor tmp/conf.crossBrowsers.js",
+    "pretest-prod-cross": "tsc",
+    "test-prod-cross": "protractor tmp/conf.crossBrowsers.js --params.baseUrl=https://www.google.com"
+  },
+  "dependencies": {
+    "@types/jasmine": "~2.5.53",
+    "@types/jasminewd2": "~2.0.2",
+    "@types/node": "~6.0.60",
+    "jasmine": "^2.6.2",
+    "jasmine-spec-reporter": "^4.1.0",
+    "protractor": "^5.1.2",
+    "typescript": "~2.4.0"
+  },
+  "devDependencies": {
+    "ts-node": "^3.0.2"
+  }
+}
